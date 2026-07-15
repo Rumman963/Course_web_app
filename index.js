@@ -3,8 +3,6 @@ const app = express();
 const {userRouter} = require("./routes/user");
 const {courseRouter} = require("./routes/course");
 const {adminRouter} = require("./routes/admin");
-const mongoose = require('mongoose');
-const jsonwebtoken = require('jsonwebtoken')
 
 
 app.use("/api/v1/user" , userRouter);
