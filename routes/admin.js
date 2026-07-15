@@ -2,9 +2,7 @@ const {Router} = require("express");
 const {adminModel} = require("../db");
 
 const jwt = require("jsonwebtoken");
-
-
-const JWT_ADMIN_SECRET= "Admin7865"
+const {JWT_ADMIN_SECRET} = require("../config");
 
 const adminRouter = Router();
 
@@ -49,7 +47,7 @@ adminRouter.post("/signin" , async function(req,res) {
 })
 
 adminRouter.post("/createCourse" , function(req,res) {
-
+ 
 
 
 
