@@ -1,8 +1,8 @@
 const {Router} = require("express");
 const {adminModel} = require("../db");
-
 const jwt = require("jsonwebtoken");
 const {JWT_ADMIN_SECRET} = require("../config");
+const {adminMiddleware} = require("../middlewares/admin");
 
 const adminRouter = Router();
 
