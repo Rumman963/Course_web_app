@@ -1,5 +1,5 @@
 const {Router} = require("express");
-const {adminModel} = require("../db");
+const {adminModel , courseModel} = require("../db");
 const jwt = require("jsonwebtoken");
 const {JWT_ADMIN_SECRET} = require("../config");
 const {adminMiddleware} = require("../middlewares/admin");
@@ -11,7 +11,7 @@ adminRouter.post("/signup" , async function(req,res) {
 
     const {email ,password , firstName ,lastName}= req.body;
 
-    await adminModel.create({
+   const admin =  await adminModel.create({
     email:email,
     password:password,
     firstName:firstName,
